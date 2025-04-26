@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captive Portal</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .portal-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #00b17a; /* TP-Link green */
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #009b64;
+        }
+
+        .fun-button {
+            display: none;
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .fun-button:hover {
+            background-color: #e53935;
+        }
+
+        /* TP-Link Logo Styling */
+        .logo {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="portal-container">
+        <!-- TP-Link Logo -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/TP-Link_logo_2018.svg/500px-TP-Link_logo_2018.svg.png" alt="TP-Link Logo" class="logo">
+
+        <h1>Welcome to TP-Link Network</h1>
+        <p>Click the button below to gain access to the Wi-Fi...</p>
+        
+        <!-- Main "Enter" Button -->
+        <button class="button" onclick="enableWifi()">Enter</button>
+
+        <!-- Hidden Fun Button Section -->
+        <div class="hidden">
+            <button class="fun-button" onclick="redirectToGoogle()">Fun Button! Go to Google</button>
+        </div>
+    </div>
+
+    <script>
+        // Simulate enabling Wi-Fi access
+        function enableWifi() {
+            // Simulate granting access to the Wi-Fi
+            alert("You are now connected to the Wi-Fi!");
+            
+            // Show the hidden fun button after clicking the 'Enter' button
+            showFunButton();
+        }
+
+        // Function to show the hidden fun button after the 'Enter' button is clicked
+        function showFunButton() {
+            document.querySelector('.fun-button').style.display = 'block';
+        }
+
+        // Redirect to Google when the Fun Button is clicked
+        function redirectToGoogle() {
+            window.location.href = "https://www.google.com";
+        }
+    </script>
+
+</body>
+</html>
